@@ -7,16 +7,11 @@
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
-       font-family:Helvetica, Arial, sans-serif;
+    font-family:Helvetica, Arial, sans-serif;
+    color: rgb(86, 19, 19)
 }
 
 header {
-    padding-top: 2vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     font-family:Helvetica, Arial, sans-serif;
     width: 100%;
@@ -24,9 +19,9 @@ header {
     background-color: rgb(251, 226, 190);
 }
 h1 {
-    margin-top: 2vh;
-    margin-bottom: 0.5%;
-    font-size: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: xxx-large;
 }
 
 a {
@@ -63,7 +58,7 @@ nav {
     display:flex;
     flex-direction: row;
     font-size: 1.5vh;
-    gap: 2vw
+    gap: 2vw;
 }
 
 .nav-item {
@@ -74,7 +69,8 @@ nav {
     align-items: center;
     border-radius: 45px;
     background-color: rgb(249, 206, 146);
-
+    font-weight: 500;
+    
 }
 
 body {
@@ -118,9 +114,19 @@ li {
     padding-top: 0.25vh;
 }
 
+.add-exp, .edu-list, .vol-list, car-sum {
+    margin-top: 1vh;
+}
+
+
 .nav-item:hover{
     transform: scale(1.5);
     color: rgb(249, 206, 146);
     background-color: rgb(108, 25, 25);
+    transition: 1s
+}
+
+.detail-item:hover{
+    transform: scale(1.5);
     transition: 1s
 }

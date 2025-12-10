@@ -1,12 +1,32 @@
-body {
-    font-family:Helvetica, Arial, sans-serif  ;
+* {
+  margin: 0vw;
+  padding: 0vw;
+  box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+       font-family:Helvetica, Arial, sans-serif;
+}
+
+header {
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family:Helvetica, Arial, sans-serif;
+    width: 100%;
+    color: rgb(108, 25, 25);
+    background-color: rgb(251, 226, 190);
 }
 h1 {
-    text-align: center;
+    margin-top: 2vh;
     margin-bottom: 0.5%;
-}
-ul {
-    list-style: none;
+    font-size: 3vh;
 }
 
 a {
@@ -23,5 +43,84 @@ a {
     justify-content: center;
     align-items: center;
     padding-top: 0.4%;
-    /* padding-left: 0%; */
+    font-size: 1.5vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1vh;
+    background-color: rgb(249, 206, 146);
+}
+.nav-bar {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 5vh;
+    display:flex;
+    flex-direction: row;
+    font-size: 1.5vh;
+    gap: 2vw
+}
+
+.nav-item {
+    height: 100%;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    background-color: rgb(249, 206, 146);
+
+}
+
+body {
+    width: 100%;
+    background-color: rgb(255, 238, 215);
+}
+
+h2 {
+    padding-top: 2vh;
+    margin-left: 1%;
+    font-size: xx-large;
+}
+
+h3 {
+    margin-top: 2vh;
+    padding-top: 0.5vh;
+    margin-left: 2%;
+}
+
+h4 {
+    padding-top: 2vh;
+    margin-left: 2%;
+   }
+h5 {
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    text-align: center;
+}
+
+p {
+    padding-top: 0.5vh;
+    margin-left: 2%;
+}
+
+ul {
+    list-style: none;     /* remove bullets */
+    margin-left: 3%;
+}
+
+li {
+    padding-top: 0.25vh;
+}
+
+.nav-item:hover{
+    transform: scale(1.5);
+    color: rgb(249, 206, 146);
+    background-color: rgb(108, 25, 25);
+    transition: 1s
 }

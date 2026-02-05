@@ -130,5 +130,23 @@ and contribute to the reliable day-to-day operation of cloud and data centre env
                     <li class="ref-item">+61 419 962 257</li>
                 </ul>
     <h5>Further references available upon request</h5>
+    <p>
+  <span id="visitor-count">loading...</span> Awesome people have checked out this resume!
+</p>
+
+<script>
+  const counterEl = document.getElementById("visitor-count");
+
+  fetch("YOUR_INVOKE_URL_HERE/count")
+    .then((res) => res.json())
+    .then((data) => {
+      counterEl.textContent = data.count;
+    })
+    .catch((err) => {
+      console.error(err);
+      counterEl.textContent = "error";
+    });
+</script>
+
   </body>
 </html>

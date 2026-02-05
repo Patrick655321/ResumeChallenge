@@ -97,7 +97,6 @@ h4 {
 h5 {
     padding-top: 4vh;
     padding-bottom: 2vh;
-    text-align: center;
 }
 
 p {
@@ -129,6 +128,10 @@ li {
 .detail-item:hover{
     transform: scale(1.5);
     transition: 1s
+}
+
+#lambda {
+      text-align: center;
 }
 
 @media (max-width: 800px) {

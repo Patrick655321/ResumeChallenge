@@ -137,7 +137,28 @@ and contribute to the reliable day-to-day operation of cloud and data centre env
 <script>
   const counterEl = document.getElementById("visitor-count");
 
-  fetch("YOUR_INVOKE_URL_HERE/count")
+  fetch("https://cjff2nsf45.execute-api.ap-southeast-4.amazonaws.com/count")
+    .then(async (res) => {
+      const text = await res.text();
+      console.log("STATUS:", res.status);
+      console.log("RAW RESPONSE:", text);
+
+      try {
+        const data = JSON.parse(text);
+        counterEl.textContent = data.count;
+      } catch {
+        counterEl.textContent = "not json";
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      counterEl.textContent = "fetch failed";
+    });
+</script>
+<!-- <script>
+  const counterEl = document.getElementById("visitor-count");
+
+  fetch("https://cjff2nsf45.execute-api.ap-southeast-4.amazonaws.com/count")
     .then((res) => res.json())
     .then((data) => {
       counterEl.textContent = data.count;
@@ -146,7 +167,7 @@ and contribute to the reliable day-to-day operation of cloud and data centre env
       console.error(err);
       counterEl.textContent = "error";
     });
-</script>
+</script> -->
 
   </body>
 </html>
